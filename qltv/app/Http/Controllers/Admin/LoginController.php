@@ -16,23 +16,23 @@ class LoginController extends Controller
         ]);
     }
     public function store(Request $request){
-        //hàm xử lý cho việc login   
+        //hàm xử lý cho việc login
         //echo "xử lý login";
         //dd($request->input());
         $this->validate($request,[
             'email'=>'required|email:filter',
             'password'=>'required'
         ]);
-        
+
         if(Auth::attempt([
             'email'=>$request->input('email'),
             'password'=>$request->input('password')
         ]))
         {
-            echo "đăng nhập thành công";
-            //return redirect()->route('admin');
+            //echo "đăng nhập thành công";
+            return redirect()->route('admin');
         }
         Session()->flash('error','Tên đăng nhập hoặc mật khẩu không chính xác');
         return redirect()->back();
-    }   
+    }
 }
