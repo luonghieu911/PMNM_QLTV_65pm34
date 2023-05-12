@@ -13,5 +13,4 @@
   <link rel="stylesheet" href="/theme/dist/css/adminlte.min.css">
 
     <script src="/ckeditor/ckeditor.js"></script>
-
 </head>

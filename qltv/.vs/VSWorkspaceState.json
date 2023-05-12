@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\admin",
+    "\\resources\\views\\admin\\danhmuc"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\DanhmucController.php",
+  "PreviewInSolutionExplorer": false
+}
