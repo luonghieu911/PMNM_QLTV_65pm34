@@ -51,5 +51,10 @@ class DanhMucService
           }
           return true;
       }
-
+    public function delete($request){
+        $danhmuc = Danhmuc::where('id',$request->input('id'))->first();
+        if($danhmuc){
+            return $danhmuc->delete();
+        }
+    }
 }

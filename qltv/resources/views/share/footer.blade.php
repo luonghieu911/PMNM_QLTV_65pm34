@@ -4,3 +4,4 @@
 <script src="/theme/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/theme/dist/js/adminlte.min.js"></script>
+<script src="/js/main.js"></script>

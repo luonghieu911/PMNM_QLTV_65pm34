@@ -45,4 +45,16 @@ class DanhmucController extends Controller
         $result = $this->danhmucService->edit($request,$danhmuc);
         return redirect()->back();
     }
+    public function delete(Request $request){
+        $result = $this->danhmucService->delete($request);
+        if($result){
+            return respone()->json([
+               'error'=>'false',
+               'message'=>'Xóa đối tượng thành công'
+            ]);
+        }
+        return response()->json([
+            'error'=>'true'
+        ]);
+    }
 }

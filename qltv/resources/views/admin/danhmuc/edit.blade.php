@@ -5,7 +5,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1">Mã danh mục:</label>
-                <input type="text" value="{{$danhmuc->MaDM}}" name="MaDM" class="form-control" id="MaDM" placeholder="Nhập mã danh mục">
+                <input readonly type="text" value="{{$danhmuc->MaDM}}" name="MaDM" class="form-control" id="MaDM" placeholder="Nhập mã danh mục">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Tên danh mục:</label>
