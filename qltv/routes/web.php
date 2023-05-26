@@ -33,7 +33,6 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit/{danhmuc}',[DanhmucController::class,'edit']);
             Route::post('edit/{danhmuc}',[DanhmucController::class,'postedit']);
             Route::DELETE('delete',[DanhmucController::class,'delete']);
-
         });
     });
 });

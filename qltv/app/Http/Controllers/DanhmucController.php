@@ -48,9 +48,9 @@ class DanhmucController extends Controller
     public function delete(Request $request){
         $result = $this->danhmucService->delete($request);
         if($result){
-            return respone()->json([
+            return response()->json([
                'error'=>'false',
-               'message'=>'Xóa đối tượng thành công'
+               'message'=>'Xóa danh mục thành công'
             ]);
         }
         return response()->json([
