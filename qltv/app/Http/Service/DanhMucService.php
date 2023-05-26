@@ -29,9 +29,27 @@ class DanhMucService
         //return Danhmuc::get();
 
          //paging
-//         $danhmuc = DB::table('danhmucs')->where('id', 1)->get();
-//         return $danhmuc;
+        //$danhmuc = DB::table('danhmucs')->where('id', 1)->get();
+         //return $danhmuc;
+         //return $danhmuc;
         return Danhmuc::paginate(2);
      }
+      public function edit($request,$danhmuc)
+      {
+          try {
+              $danhmuc->MaDM = $request->input('MaDM');
+              $danhmuc->TenDM = $request->input('TenDM');
+              $danhmuc->MoTa = $request->input('MoTa');
+              $danhmuc->Vitri = $request->input('ViTri');
+              $danhmuc->save();
+              Session()->flash('success','Sửa thông tin danh mục thành công');
+
+          }
+          catch (Exception $ex){
+              Session()->flash('error',$ex->getMessage());
+              return false;
+          }
+          return true;
+      }
 
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDanhMucRequest;
 use App\Http\Service\DanhMucService;
+use App\Models\Danhmuc;
 use Illuminate\Http\Request;
 
 class DanhmucController extends Controller
@@ -32,5 +33,16 @@ class DanhmucController extends Controller
             'title'=>'Danh sách danh mục',
             'danhmucs' => $this->danhmucService->getAll()
         ]);
+    }
+    public function edit(Danhmuc $danhmuc){
+        //dd($danhmuc);
+        return view('admin.danhmuc.edit',[
+            'title'=>'Sửa thông tin danh mục',
+            'danhmuc'=>$danhmuc
+        ]);
+    }
+    public function postedit(Danhmuc $danhmuc,CreateDanhMucRequest $request){
+        $result = $this->danhmucService->edit($request,$danhmuc);
+        return redirect()->back();
     }
 }
