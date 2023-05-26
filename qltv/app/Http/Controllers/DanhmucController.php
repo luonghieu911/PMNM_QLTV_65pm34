@@ -26,4 +26,11 @@ class DanhmucController extends Controller
         $result = $this->danhmucService->create($request);
         return redirect()->back();
     }
+    public function list(){
+        //dd($this->danhmucService->getAll());
+        return view('admin.danhmuc.list',[
+            'title'=>'Danh sách danh mục',
+            'danhmucs' => $this->danhmucService->getAll()
+        ]);
+    }
 }

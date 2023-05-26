@@ -45,13 +45,13 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/admin/danhmuc/add" class="nav-link">
-                                <i class="fas fa-solid fa-plus"></i>
+                                <i class="fas fa-light fa-circle"></i>
                                 <p>Thêm mới danh mục</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="# " class="nav-link">
-                                <i class="fas fa-solid fa-list"></i>
+                            <a href="/admin/danhmuc/list" class="nav-link">
+                                <i class="fas fa-light fa-circle"></i>
                                 <p>Danh sách danh mục</p>
                             </a>
                         </li>

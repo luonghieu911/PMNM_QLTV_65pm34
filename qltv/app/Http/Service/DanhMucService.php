@@ -4,6 +4,7 @@ namespace App\Http\Service;
 
 use App\Models\Danhmuc;
 use PHPUnit\Exception;
+use DB;
 
 class DanhMucService
 {
@@ -23,4 +24,14 @@ class DanhMucService
         }
         return true;
     }
+     public function getAll(){
+        //lay toan bo
+        //return Danhmuc::get();
+
+         //paging
+//         $danhmuc = DB::table('danhmucs')->where('id', 1)->get();
+//         return $danhmuc;
+        return Danhmuc::paginate(2);
+     }
+
 }

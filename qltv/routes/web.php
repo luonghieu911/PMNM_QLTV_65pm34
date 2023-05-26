@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('danhmuc')->group(function () {
             Route::get('add',[DanhmucController::class,'create']);
             Route::post('add/store',[DanhmucController::class,'store']);
+            Route::get('list',[DanhmucController::class,'list']);
         });
     });
 });
